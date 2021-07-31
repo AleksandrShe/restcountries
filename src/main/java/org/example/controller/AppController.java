@@ -4,8 +4,6 @@ import org.example.models.Country;
 import org.example.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +18,6 @@ import java.util.List;
  *
  * @author Aleksandr
  */
-@ComponentScan(basePackages = {"org.example"})
-@EnableJpaRepositories("org.example.repository")
 @Controller
 public class AppController {
 
