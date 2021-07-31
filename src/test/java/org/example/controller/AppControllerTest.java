@@ -122,7 +122,7 @@ public class AppControllerTest {
         Country russia = new Country();
         russia.setId(186);
         russia.setName("Russian Federation");
-        russia.setPopulation("146599183");
+        russia.setPopulation(146599183);
         russia.setFlag("https://restcountries.eu/data/rus.svg");
         russia.setTopLevelDomain(List.of(".ru"));
         russia.setLatlng(List.of("60.0, 100.0"));

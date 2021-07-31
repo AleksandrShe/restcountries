@@ -23,7 +23,7 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String population;
+    private int population;
     private String flag;
 
     @ElementCollection
