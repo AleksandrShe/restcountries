@@ -4,6 +4,7 @@ import org.example.models.Country;
 import org.example.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import java.util.List;
  * @author Aleksandr
  */
 @Controller
+@ComponentScan("org.example.repository")
 public class AppController {
 
     @Autowired
