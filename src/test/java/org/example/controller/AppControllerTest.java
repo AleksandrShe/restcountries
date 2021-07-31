@@ -41,6 +41,9 @@ public class AppControllerTest {
             "br=Rússia, pt=Rússia, nl=Rusland, hr=Rusija, fa=روسیه)], regionalBlocs=[RegionalBloc(regionalBlocsId=148, " +
             "acronym=EEU, name=Eurasian Economic Union, otherAcronyms=[EAEU], otherNames=[])]}";
 
+    /**
+     * Test for finding country by name.
+     */
     @Test
     public void testByName() throws Exception {
 
@@ -55,6 +58,9 @@ public class AppControllerTest {
                 .andExpect(content().string(CoreMatchers.containsString(EXPECTED_STRING)));
     }
 
+    /**
+     * Test for finding domain by name.
+     */
     @Test
     public void testByDomain() throws Exception {
 
@@ -69,6 +75,10 @@ public class AppControllerTest {
                 .andExpect(content().string(CoreMatchers.containsString(EXPECTED_STRING)));
     }
 
+    /**
+     * Test for finding domain using "like" in query.
+     * "Russian Federation" is one which contains "r" in topLevelDomain.
+     */
     @Test
     public void testByDomainLike() throws Exception {
 
@@ -84,9 +94,12 @@ public class AppControllerTest {
                 .andExpect(content().string(CoreMatchers.containsString(EXPECTED_STRING)));
     }
 
+    /**
+     * This test deletes all entries from DB.
+     * Then, looks for "Russian Federation" and doesn't find it.
+     */
     @Test
     public void testDelete() throws Exception {
-
 
         mockMvc.perform(get("/delete"))
                 .andExpect(status().isOk())
