@@ -26,6 +26,37 @@
         </h2>
     </div>
 
+    <div>
+        Find Country
+        <form method = "post" action = "country">
+            <input type = "text" name = "country">
+            <button type = submit>Find</button>
+        </form>
+    </div>
+
+    <div>
+       Find domain (ex.: ".ru")
+        <form method = "post" action = "domain">
+            <input type = "text" name = "domain">
+            <button type = submit>Find</button>
+        </form>
+    </div>
+
+    <div>
+        Find domain (using "like")
+        <form method = "post" action = "domainLike">
+            <input type = "text" name = "domain">
+            <button type = submit>Find</button>
+        </form>
+    </div>
+
+    <div>
+        Clear DB.
+        <form method = "get" action = "delete">
+            <button type = submit>Delete entries</button>
+        </form>
+    </div>
+
 </main>
 
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>

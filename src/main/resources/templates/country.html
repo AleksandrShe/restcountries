@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Country by name or domain</title>
+</head>
+<body>
+
+<ul th:if="${country}">
+    Country found:
+    <br>
+    <p th:text="${country.toString()}"/>
+</ul>
+<ul th:unless="${country}">
+    <p> Country/domain "<span th:text="${key}">key</span>" not found </p>
+</ul>
+
+</body>
+</html>

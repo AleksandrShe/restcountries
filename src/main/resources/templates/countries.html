@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Country by domain (using like)</title>
+</head>
+<body>
+
+<ul th:if="${countries.size()}">
+    Countries found:
+    <br>
+    <tr th:each="country : ${countries}">
+        <p th:text="${country.toString()}"/>
+</ul>
+<ul th:unless="${countries.size()}">
+    <p> Domain "<span th:text="${key}">key</span>" not found </p>
+</ul>
+
+</body>
+</html>
